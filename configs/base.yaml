@@ -1,0 +1,51 @@
+# =========================
+# Base config (shared defaults)
+# =========================
+
+experiment:
+  id: "baseline-vae"
+  seed: 42
+  output_dir: "reports/logs"
+  save_dir: "checkpoints"
+  device: "cuda"    # or "cpu"
+
+dataset:
+  name: "mnist"     # options: mnist | cifar10 | celeba | dsprites
+  data_dir: "data"
+  img_size: 32
+  channels: 1       # 1 for MNIST, 3 for CIFAR10/CelebA
+  subset_ratio: 1.0 # use 0.1 / 0.5 for ablations
+
+model:
+  family: "vae"     # options: vae | bvae | vqvae | hier_vae | vaegan | gan | diffusion
+  z_dim: 32
+  beta: 1.0         # only used in β-VAE
+  codebook_size: null  # only used in VQ-VAE
+  hierarchy: "none"    # "2level" for hierarchical
+  prior: "standard"    # "standard" | "vamp"
+
+training:
+  batch_size: 128
+  epochs: 50
+  optimizer: "adam"
+  lr: 0.0002
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+  kl_anneal: true
+  kl_anneal_epochs: 30
+  recon_loss: "bce"    # mse | bce | smoothl1
+  grad_clip: 5.0
+  early_stop_patience: 10
+
+logging:
+  backend: "tensorboard"   # "wandb" or "tensorboard"
+  log_interval: 100
+  sample_interval: 5       # epochs
+  save_interval: 5         # epochs
+  num_samples: 64
+
+metrics:
+  eval_fid: true
+  eval_is: false   # toggle for CIFAR10+
+  eval_psnr: true
+  eval_ssim: true

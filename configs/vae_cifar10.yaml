@@ -1,0 +1,14 @@
+experiment:
+  id: "vae-cifar10"
+
+dataset:
+  name: "cifar10"
+  img_size: 32
+  channels: 3
+
+model:
+  z_dim: 64
+
+training:
+  epochs: 200
+  recon_loss: "mse"
