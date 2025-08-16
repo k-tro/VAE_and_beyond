@@ -18,7 +18,7 @@
 
 ---
 
-## Phase B — VAE Variants
+## Phase B - VAE Variants
 1. β-VAE:
    - Vary β={0.5,1,2,4,8}.
    - Test disentanglement metrics on dSprites, 3D-Shapes.
@@ -32,14 +32,14 @@
 
 ---
 
-## Phase C — Beyond VAE
+## Phase C - Beyond VAE
 1. VAE-GAN (compare sharpness vs ELBO).
 2. GAN baselines (DCGAN, WGAN-GP).
 3. Diffusion baseline (DDPM-lite).
 
 ---
 
-## Phase D — Evaluation & Analysis
+## Phase D - Evaluation & Analysis
 - Metrics:
   - Reconstruction: PSNR, SSIM, MSE
   - Generation: FID, IS
