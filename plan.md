@@ -8,7 +8,7 @@
 
 ---
 
-## Phase A — Baseline VAEs
+## Phase A - Baseline VAEs
 1. Implement vanilla VAE.
 2. Experiments:
    - Latent size sweep (z=16,32,64,128).
