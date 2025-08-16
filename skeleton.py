@@ -38,4 +38,4 @@ def create_repo(base_path="."):
 
 if __name__ == "__main__":
     create_repo()
-    print("✅ Repo skeleton created in ./vae-benchmark")
+    print("Repo skeleton created in ./vae-benchmark")
