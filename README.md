@@ -1,6 +1,6 @@
 # VAE Benchmark Project
 
-See /plan.md for detailed research goals and experimental roadmap.
+See [plan.md](/plan.md) for detailed research goals and experimental roadmap.
 
 ## Purpose
 
